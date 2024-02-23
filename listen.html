@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>Listen</title>
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper {
+            width: 65%;
+            height: 50%;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .unordered, .ordered {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body class="bg-secondary">
+    <header class="p-4 bg-info text-white rounded text-center mb-3">
+        <h1>Listen</h1>
+        <p>Überblick der verschiedenen Arten</p>
+    </header>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <h1 class="text-primary">Ungeordnete Liste</h1>
+                <ul class="text-justify unordered">
+                    <li>Hund</li>
+                    <li>Katze</li>
+                    <li>Hamster</li>
+                    <li>Meerschweinchen</li>
+                    <li>Wellensittich</li>
+                    <li>Kobra</li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <h1 class="text-primary">Geordnete Liste</h1>
+                <ol class="text-justify ordered">
+                    <li>Hund</li>
+                    <li>Katze</li>
+                    <li>Hamster</li>
+                    <li>Meerschweinchen</li>
+                    <li>Wellensittich</li>
+                    <li>Kobra</li>
+                </ol>
+            </div>
+            <div class="swiper-slide">
+                <h1 class="text-primary">Ungeordnete Liste mit Kreis ohne Füllung</h1>
+                <ul style="list-style-type: circle;" class="text-justify unordered">
+                    <li>Hund</li>
+                    <li>Katze</li>
+                    <li>Hamster</li>
+                    <li>Meerschweinchen</li>
+                    <li>Wellensittich</li>
+                    <li>Kobra</li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <h1 class="text-primary">Geordnete Liste mit Aufzählungszeichen</h1>
+                <ol style="list-style-type: square;" class="text-justify ordered">
+                    <li>Hund</li>
+                    <li>Katze</li>
+                    <li>Hamster</li>
+                    <li>Meerschweinchen</li>
+                    <li>Wellensittich</li>
+                    <li>Kobra</li>
+                </ol>
+            </div>
+            <div class="swiper-slide">
+                <h1 class="text-primary">Liste mit Buchstaben als Aufzählungszeichen</h1>
+                <ul style="list-style-type: upper-alpha;" class="text-justify unordered">
+                    <li>Hund</li>
+                    <li>Katze</li>
+                    <li>Hamster</li>
+                    <li>Meerschweinchen</li>
+                    <li>Wellensittich</li>
+                    <li>Kobra</li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <h1 class="text-primary">Verschachtelte Liste</h1>
+                <ol>
+                    <li class="ordered">Hund
+                        <ul style="list-style-type: square;">
+                            <li>Deutscher Schäferhund</li>
+                            <li>Bernhardiner</li>
+                            <li>Labrador</li>
+                        </ul>
+                    </li>
+                    <li class="ordered">Katze
+                        <ul style="list-style-type: square;">
+                            <li>Maykoon</li>
+                            <li>Europäische Hauskatze</li>
+                            <li>Norwegische Waldkatze</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <footer class="p-4 bg-warning text-dark rounded text-center d-flex justify-content-around">
+        <p>&copy; niftyprogramming</p>
+        <p>Listen</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        /*autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },*/
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+</body>
+</html>
